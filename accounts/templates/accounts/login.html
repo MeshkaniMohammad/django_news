@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <form action="" method="POST" style="margin-top: 20px; margin-left: 20px;">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">ورود به حساب</button>
+    </form>
+{% endblock %}

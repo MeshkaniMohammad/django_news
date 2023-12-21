@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+    <form action="" method="POST" style="margin-top: 20px; margin-left: 20px;">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">ایجاد حساب</button>
+    </form>
+{% endblock %}
